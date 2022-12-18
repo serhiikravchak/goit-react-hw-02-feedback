@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import {Btn,List } from './FeedbackOptions.styled'
+import { Box } from 'components/common/GlobalStylex.styled';
 // import { Box } from 'components/common/GlobalStylex.styled';
 
 
@@ -13,7 +14,7 @@ export class FeedbackOptions extends Component {
     render() {
         const types = Object.keys(this.props.state);
       return (
-      
+        <Box>
           <List>
             {types.map(type => {
               return (
@@ -25,7 +26,7 @@ export class FeedbackOptions extends Component {
               );
             })}
           </List>
-      
+        </Box>
       );
     }
 };

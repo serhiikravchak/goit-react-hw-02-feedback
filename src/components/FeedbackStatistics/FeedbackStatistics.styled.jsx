@@ -12,3 +12,8 @@ export const Item = styled.li`
 export const Message = styled.p`
     color: orange
 `
+
+export const Positive = styled.span`
+font-size: bold;
+color: green;
+`

@@ -10,7 +10,7 @@ export const Btn = styled.button`
   font-size: 10px;
   margin-right: 10px;
   border: none;
-  cursor: pointer;
+
   &:hover, &:focus{
     background-color: blue;
     color: white;

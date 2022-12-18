@@ -3,6 +3,7 @@ import { FeedbackOptions } from './FeedbackOptions/FeedbackOptions';
 import { FeedbackStatistics } from './FeedbackStatistics/FeedbackStatistics';
 import { Notification } from './FeedbackStatistics/Notification';
 import { Box } from './common/GlobalStylex.styled';
+import { Section } from './common/Section';
 
 
 
@@ -39,24 +40,23 @@ export class App extends Component {
     const positiveFeedback = this.countPositiveFeedback();
     return (
       <Box>
-        <FeedbackOptions
-          state={this.state}
-          feedbackClick={this.handleFeedback}
-        />
-        {/* <FeedbackStatistics
-          list={this.state}
-          total={totalFeedback}
-          positive={positiveFeedback}
-        /> */}
-        {totalFeedback ? (
-          <FeedbackStatistics
-            list={this.state}
-            total={totalFeedback}
-            positive={positiveFeedback}
+        <Section title="Please leave feedback">
+          <FeedbackOptions
+            state={this.state}
+            feedbackClick={this.handleFeedback}
           />
-        ) : (
-          <Notification alert={'No feedback given'} />
-        )}
+        </Section>
+        <Section title="Feedback statistics">
+          {totalFeedback ? (
+            <FeedbackStatistics
+              list={this.state}
+              total={totalFeedback}
+              positive={positiveFeedback}
+            />
+          ) : (
+            <Notification alert={'No feedback given'} />
+          )}
+        </Section>
       </Box>
     );
     

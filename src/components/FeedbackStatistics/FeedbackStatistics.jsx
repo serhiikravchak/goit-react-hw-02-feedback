@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import { Box  } from 'components/common/GlobalStylex.styled';
-import { Item, List } from './FeedbackStatistics.styled';
+import { Item, List, Positive } from './FeedbackStatistics.styled';
 
 export function FeedbackStatistics({ list, total, positive }) {
   const items = Object.keys(list);
@@ -9,15 +9,15 @@ export function FeedbackStatistics({ list, total, positive }) {
        <List>
          {items.map(item => {
            return (
-             <li key={item}>
+             <Item key={item}>
                {item}: {list[item]}
-             </li>
+             </Item>
            );
          })}
        </List>
        <p>Total: {total} </p>
        <p>
-         Positive percentage: <span>{positive}%</span>
+         Positive percentage: <Positive>{positive}%</Positive>
        </p>
      </Box>
    );
