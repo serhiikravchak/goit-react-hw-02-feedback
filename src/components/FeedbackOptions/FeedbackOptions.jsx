@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import {Btn,List } from './FeedbackOptions.styled'
+import {List } from './FeedbackOptions.styled'
 import { Box } from 'components/common/GlobalStylex.styled';
 // import { Box } from 'components/common/GlobalStylex.styled';
 
